@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 Column buildScoreColumn(String player, int score) {
@@ -6,12 +7,12 @@ Column buildScoreColumn(String player, int score) {
     children: [
       Text(
         player,
-        style: TextStyle(color: Colors.white, fontSize: 18),
+        style: TextStyle(color: Colors.white, fontSize: 18.sp),
       ),
-      SizedBox(height: 10),
+      SizedBox(height: 10.h),
       Text(
         "$score",
-        style: TextStyle(color: Colors.white, fontSize: 30),
+        style: TextStyle(color: Colors.white, fontSize: 30.sp),
       ),
     ],
   );

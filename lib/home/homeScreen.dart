@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'buildScoreWidget.dart';
 
@@ -26,7 +27,7 @@ class HomeScreenState extends State<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 50,bottom: 30),
+            padding: REdgeInsets.only(top: 50,bottom: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -38,7 +39,7 @@ class HomeScreenState extends State<HomeScreen> {
           Expanded(
             flex: 2,
             child: GridView.builder(
-              padding: EdgeInsets.all(20),
+              padding: REdgeInsets.all(20),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 crossAxisSpacing: 10,
@@ -56,7 +57,7 @@ class HomeScreenState extends State<HomeScreen> {
                     child: Center(
                       child: Text(
                         display[index],
-                        style: TextStyle(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white, fontSize: 35.sp, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -71,19 +72,19 @@ class HomeScreenState extends State<HomeScreen> {
                 oScore =0;
               },
                 child: Container(
-                 padding:  EdgeInsetsDirectional.all(10),
-                  decoration: BoxDecoration( color: Colors.blueGrey,borderRadius: BorderRadius.circular(10)),
+                 padding:  REdgeInsetsDirectional.all(10),
+                  decoration: BoxDecoration( color: Colors.blueGrey,borderRadius: BorderRadius.circular(10).r),
                  
                   child: Text(
-                    "Restart",style: TextStyle(color: Colors.white, fontSize: 20),
+                    "Restart",style: TextStyle(color: Colors.white, fontSize: 20.sp),
                   ),
                 )
             ),
           Padding(
-            padding: const EdgeInsets.only(top: 80,bottom: 30),
+            padding:  REdgeInsets.only(top: 80,bottom: 30),
             child: Text(
               "TIC TAC TOE",
-              style: TextStyle(color: Colors.white, fontSize: 25),
+              style: TextStyle(color: Colors.white, fontSize: 25.sp),
             ),
           ),
         ],
@@ -146,10 +147,10 @@ class HomeScreenState extends State<HomeScreen> {
       builder: (context) {
         return AlertDialog(
           backgroundColor: Colors.grey[800],
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15).r),
           title: Text(
             title,
-            style: TextStyle(color: Colors.white, fontSize: 24),
+            style: TextStyle(color: Colors.white, fontSize: 24.sp),
           ),
           actions: [
             TextButton(
@@ -158,7 +159,7 @@ class HomeScreenState extends State<HomeScreen> {
               },
               child: Text(
                 buttonText,
-                style: TextStyle(color: Colors.blueAccent, fontSize: 20),
+                style: TextStyle(color: Colors.blueAccent, fontSize: 20.sp),
               ),
             ),
           ],
